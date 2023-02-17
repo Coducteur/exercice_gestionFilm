@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div class="title">
+    <h2>Popular Movies:</h2>
+</div>
+<div class="flex-container">
+    <img *ngFor="let movie of popularMovies" [src]='"https://image.tmdb.org/t/p/w92/" + movie.poster_path'
+        alt="poster du film">
+</div>

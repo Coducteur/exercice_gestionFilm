@@ -1,7 +1,28 @@
-<div class="title">
+<div class="movies-block">
     <h2>Popular Movies:</h2>
+    <div class="flex-container">
+        <img *ngFor="let popularMovie of popularMovies"
+            [src]="'https://image.tmdb.org/t/p/w154/'+popularMovie.poster_path" alt="poster du film">
+    </div>
 </div>
-<div class="flex-container">
-    <img *ngFor="let movie of popularMovies" [src]='"https://image.tmdb.org/t/p/w92/" + movie.poster_path'
-        alt="poster du film">
+<div class="movies-block">
+    <h2>Next On Theaters:</h2>
+    <div class="flex-container">
+        <img *ngFor="let nextMovie of nextOnTheater" [src]="'https://image.tmdb.org/t/p/w154/'+nextMovie.poster_path"
+            alt="poster du film">
+    </div>
+</div>
+<div class="movies-block">
+    <h2>Best Votes:</h2>
+    <div class="flex-container">
+        <img *ngFor="let bestMovie of bestNotesFilms" [src]="'https://image.tmdb.org/t/p/w154/'+bestMovie.poster_path"
+            alt="poster du film">
+    </div>
+</div>
+<div class="movies-block">
+    <h2>Now Playing on theaters:</h2>
+    <div class="flex-container">
+        <img *ngFor="let nowMovie of nowInTheater" [src]="'https://image.tmdb.org/t/p/w154/'+nowMovie.poster_path"
+            alt="poster du film">
+    </div>
 </div>

@@ -45,8 +45,10 @@ Pour la liste des films populaires : https://api.themoviedb.org/3/movie/popular?
 Pour la liste des films actuellement en salle : https://api.themoviedb.org/3/movie/now_playing?api_key=VOTRE_CLE_API&language=fr-FR&page=1&region=FR
 Pour la liste des films les mieux notés : https://api.themoviedb.org/3/movie/top_rated?api_key=VOTRE_CLE_API&language=fr-FR&page=1
 Pour les films prochainement en salle : https://api.themoviedb.org/3/movie/upcoming?api_key=VOTRE_CLE_API&language=fr-FR&page=1&region=FR
+
 Pour les infos d'un film via son id : https://api.themoviedb.org/3/movie/${movieId}?api_key=VOTRE_CLE_API&language=fr-FR
 Pour les infos d'un acteur via son id : https://api.themoviedb.org/3/person/${actorId}?api_key=VOTRE_CLE_API&language=fr-FR
+
 Pour avoir la liste des films dans lesquels un acteur a joué via son id : https://api.themoviedb.org/3/person/${actorId}/movie_credits?api_key=VOTRE_CLE_API&language=fr-FR
 Pour avoir une liste de films à partir d'un input (champ de recherche) : https://api.themoviedb.org/3/search/movie?api_key=VOTRE_CLE_API&language=fr-FR&query=${input}&page=1&include_adult=false&region=FR
 Pour récupérer la liste des acteurs d'un film via son id : https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=VOTRE_CLE_API&language=fr-FR

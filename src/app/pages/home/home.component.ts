@@ -9,19 +9,37 @@ import { popularMovie } from 'src/app/data/PopularMovie.model';
 })
 export class HomeComponent implements OnInit {
   popularMovies: any = [];
-  nextOnTheater: [] = [];
-  bestNotesFilms: [] = [];
-  nowInTheater: [] = [];
+  nextOnTheater: any = [];
+  bestNotesFilms: any = [];
+  nowInTheater: any = [];
 
   constructor(private useService: ApiService) {}
 
   ngOnInit() {
     this.getPopularMovies();
+    this.getNextMoviesOnTheater();
+    this.getBestNotedFilms();
+    this.getNowPlayingOnTheater();
   }
 
   getPopularMovies() {
     return this.useService
       .getPopularMovies()
       .subscribe((response) => (this.popularMovies = response.results));
+  }
+  getNextMoviesOnTheater() {
+    return this.useService
+      .getNextMoviesOnTheater()
+      .subscribe((response) => (this.nextOnTheater = response.results));
+  }
+  getBestNotedFilms() {
+    return this.useService
+      .getBestNotedFilms()
+      .subscribe((response) => (this.bestNotesFilms = response.results));
+  }
+  getNowPlayingOnTheater() {
+    return this.useService
+      .getNowPlayingOnTheater()
+      .subscribe((response) => (this.nowInTheater = response.results));
   }
 }

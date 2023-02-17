@@ -11,13 +11,25 @@ export class ApiService {
 
   getPopularMovies(): Observable<any> {
     return this.http.get(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=fr&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=fr&page=1&region=FR`
     );
   }
 
-  getNextMoviesOnTheater() {}
+  getNextMoviesOnTheater(): Observable<any> {
+    return this.http.get(
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=fr&page=1&region=FR`
+    );
+  }
 
-  getBestNotedFilms() {}
+  getBestNotedFilms(): Observable<any> {
+    return this.http.get(
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=fr&page=1&region=FR`
+    );
+  }
 
-  getNowPlayingOnTheater() {}
+  getNowPlayingOnTheater(): Observable<any> {
+    return this.http.get(
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=fr&page=1&region=FR`
+    );
+  }
 }

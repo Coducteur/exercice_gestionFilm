@@ -1,0 +1,24 @@
+.flex-container {
+    padding: 0 20%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+img {
+    border-radius: 15px;
+}
+
+@media screen and (orientation: portrait) {
+    img {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    img {
+        width: 20%;
+    }
+}

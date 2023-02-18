@@ -8,6 +8,8 @@ import { LogoComponent } from './components/logo/logo.component';
 import { FavorisComponent } from './pages/favoris/favoris.component';
 import { ActorsComponent } from './pages/actors/actors.component';
 import { MoviesComponent } from './pages/movies/movies.component';
+import { ListMoviesComponent } from './components/list-movies/list-movies.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { MoviesComponent } from './pages/movies/movies.component';
     FavorisComponent,
     ActorsComponent,
     MoviesComponent,
+    ListMoviesComponent,
+    SearchComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

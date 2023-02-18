@@ -1,4 +1,4 @@
-export class popularMovie {
+export class Movie {
   constructor(
     public id: number,
     public poster_path: string,

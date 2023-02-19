@@ -1,0 +1,14 @@
+.actors-container {
+    overflow-x: scroll;
+    display: flex;
+    gap: 10px;
+}
+
+.photos {
+    height: max-content;
+}
+
+.actors-name-character {
+    display: flex;
+    flex-direction: column-reverse;
+}

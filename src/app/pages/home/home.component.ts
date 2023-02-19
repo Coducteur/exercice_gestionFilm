@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
-import { Movie } from 'src/app/data/Movie-model';
+import { Movie } from 'src/app/data/PopularMovie.model';
 
 @Component({
   selector: 'app-home',
@@ -8,41 +8,41 @@ import { Movie } from 'src/app/data/Movie-model';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  popularMovies?: Movie[] = [];
-  nextOnTheater?: Movie[] = [];
-  bestNotesFilms?: Movie[] = [];
-  nowInTheater?: Movie[] = [];
+  popularMovies: Movie[] = [];
+  nextOnTheaterMovies: Movie[] = [];
+  bestNotesMovies: Movie[] = [];
+  nowInTheaterMovies: Movie[] = [];
 
   constructor(private useService: ApiService) {}
 
   ngOnInit() {
-    this.getPopularMovies();
-    this.getNextMoviesOnTheater();
-    this.getBestNotedFilms();
-    this.getNowPlayingOnTheater();
+    this.getPopularMoviesFromService();
+    this.getNextMoviesOnTheaterFromService();
+    this.getBestNotedFilmsFromService();
+    this.getNowPlayingOnTheaterFromService();
   }
 
-  getPopularMovies() {
+  getPopularMoviesFromService() {
     return this.useService
       .getPopularMovies()
       .subscribe((response) => (this.popularMovies = response.results));
   }
 
-  getNextMoviesOnTheater() {
+  getNextMoviesOnTheaterFromService() {
     return this.useService
       .getNextMoviesOnTheater()
-      .subscribe((response) => (this.nextOnTheater = response.results));
+      .subscribe((response) => (this.nextOnTheaterMovies = response.results));
   }
 
-  getBestNotedFilms() {
+  getBestNotedFilmsFromService() {
     return this.useService
       .getBestNotedFilms()
-      .subscribe((response) => (this.bestNotesFilms = response.results));
+      .subscribe((response) => (this.bestNotesMovies = response.results));
   }
 
-  getNowPlayingOnTheater() {
+  getNowPlayingOnTheaterFromService() {
     return this.useService
       .getNowPlayingOnTheater()
-      .subscribe((response) => (this.nowInTheater = response.results));
+      .subscribe((response) => (this.nowInTheaterMovies = response.results));
   }
 }

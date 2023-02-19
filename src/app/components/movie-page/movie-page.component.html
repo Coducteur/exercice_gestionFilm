@@ -1,0 +1,25 @@
+<div class='flex-container'>
+    <div class="display-info-movie" *ngIf="movieToDisplay">
+        <h2>
+            {{movieToDisplay.title}} - <span class="originalTitle">{{movieToDisplay.original_title}}</span>
+        </h2>
+
+        <div class="info-Movie">
+            <img [src]="'https://image.tmdb.org/t/p/w154/'+movieToDisplay.poster_path" alt="poster du film">
+
+            <div class="info">
+                <p><span *ngFor="let item of movieToDisplay.genres"> {{item.name}} </span></p>
+                <p>note: {{movieToDisplay.vote_average}} / 10</p>
+                <p>{{movieToDisplay.overview}}</p>
+            </div>
+        </div>
+
+
+
+        <div *ngIf="movieToDisplay.video"> video ? {{movieToDisplay.video}}</div>
+
+    </div>
+    <div class="display-actors">
+        <app-actors [movieId]="movieId"></app-actors>
+    </div>
+</div>

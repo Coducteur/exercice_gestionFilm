@@ -10,6 +10,7 @@ import { ActorsComponent } from './pages/actors/actors.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { ListMoviesComponent } from './components/list-movies/list-movies.component';
 import { SearchComponent } from './pages/search/search.component';
+import { MoviePageComponent } from './components/movie-page/movie-page.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SearchComponent } from './pages/search/search.component';
     MoviesComponent,
     ListMoviesComponent,
     SearchComponent,
+    MoviePageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

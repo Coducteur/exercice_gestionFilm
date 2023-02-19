@@ -1,1 +1,14 @@
-<p>actors works!</p>
+<div class="actors-container">
+    <div *ngFor="let item of actors">
+        <div class="photos">
+            <!-- <a [routerLink]="['/movies', item.id]"> -->
+            <img [src]="'https://image.tmdb.org/t/p/w92/'+item.profile_path" [alt]="'photo de '+item.name"
+                [title]="item.name">
+            <!-- </a> -->
+        </div>
+        <div class="actors-name-character">
+            <h3>{{item.name}}</h3>
+            <p>{{item.character}}</p>
+        </div>
+    </div>
+</div>

@@ -11,7 +11,7 @@ img {
     border-radius: 15px;
 }
 
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) {
     img {
         width: 30%;
     }
@@ -21,4 +21,4 @@ img {
     img {
         width: 20%;
     }
-}
+} */

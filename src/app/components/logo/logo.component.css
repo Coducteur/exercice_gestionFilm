@@ -15,3 +15,8 @@
     border: 5px yellow solid;
     border-radius: 50%;
 }
+
+a {
+    color: white;
+    font-size: 2em;
+}

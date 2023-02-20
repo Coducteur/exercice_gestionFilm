@@ -2,11 +2,15 @@
     <fieldset>
         <label for="search"></label>
         <input 
-        (click)="eraseValue()"
+        (click)="eraseValue()" 
+        [(ngModel)]="searchInfo"
         type="search" 
         [value]="value" 
         name="search" 
         id="search">
-        <button id="loupe" type="submit" class="icone-loupe"></button>
+        <a [routerLink]="['/result']">
+            <img (click)="sendSearchToService()" src="../../../assets/img/loupe.png"
+                alt="loupe">
+        </a>
     </fieldset>
 </form>

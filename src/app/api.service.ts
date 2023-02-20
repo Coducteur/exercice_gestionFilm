@@ -8,7 +8,7 @@ import { Movie } from './data/PopularMovie.model';
   providedIn: 'root',
 })
 export class ApiService {
-  
+  search: string = '';
 
   constructor(public http: HttpClient) {}
 
@@ -39,16 +39,30 @@ export class ApiService {
   }
 
   // détail d'un film:
-  getDetailsByIdMovie(movieId:number): Observable<any> {
+  getDetailsByIdMovie(movieId: number): Observable<any> {
     return this.http.get(
       `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=fr`
     );
   }
 
   // detail des acteurs du film:
-  getActorsByIdMovie(movieId:number): Observable<any> {
+  getActorsByIdMovie(movieId: number): Observable<any> {
     return this.http.get(
       `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}&language=fr`
     );
+  }
+
+  // recherche:
+  returnResultOfSearch(searchRequest: string): Observable<any> {
+    return this.http.get(
+      `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=fr&query=${searchRequest}&page=1&include_adult=false`
+    );
+  }
+
+  getSearchFromComponent(request: string) {
+    this.search = request;
+  }
+  sendSearch() {
+    return this.search;
   }
 }

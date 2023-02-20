@@ -2,7 +2,9 @@
     <div *ngFor="let item of actors">
         <div class="photos">
             <!-- <a [routerLink]="['/movies', item.id]"> -->
-            <img [src]="'https://image.tmdb.org/t/p/w92/'+item.profile_path" [alt]="'photo de '+item.name"
+            <img *ngIf="item.profile_path !== null" [src]="'https://image.tmdb.org/t/p/w92/'+item.profile_path"
+                [alt]="'photo de '+item.name" [title]="item.name">
+            <img *ngIf="item.profile_path === null" src="../../../assets/img/inconnu.png" [alt]="'photo de '+item.name"
                 [title]="item.name">
             <!-- </a> -->
         </div>

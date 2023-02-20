@@ -11,7 +11,8 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { ListMoviesComponent } from './components/list-movies/list-movies.component';
 import { SearchComponent } from './pages/search/search.component';
 import { MoviePageComponent } from './components/movie-page/movie-page.component';
-
+import { FormsModule } from '@angular/forms';
+import { SearchResultComponent } from './components/search-result/search-result.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,8 +24,9 @@ import { MoviePageComponent } from './components/movie-page/movie-page.component
     ListMoviesComponent,
     SearchComponent,
     MoviePageComponent,
+    SearchResultComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

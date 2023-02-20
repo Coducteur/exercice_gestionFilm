@@ -7,7 +7,9 @@
 .photos {
     height: max-content;
 }
-
+h3, p {
+    margin: 10 1 0 1 ;
+}
 .actors-name-character {
     display: flex;
     flex-direction: column-reverse;

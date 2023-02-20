@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MoviePageComponent } from './components/movie-page/movie-page.component';
+import { SearchResultComponent } from './components/search-result/search-result.component';
 import { FavorisComponent } from './pages/favoris/favoris.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MoviesComponent } from './pages/movies/movies.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'movies/:id',
     component: MoviePageComponent,
+  },
+  {
+    path: 'result',
+    component: SearchResultComponent,
   },
   {
     path: 'favorite',
